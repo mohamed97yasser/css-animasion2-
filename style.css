@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    display: inline-block;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+
+.line {
+    background-color: rgb(255, 255, 255);
+    width: 10px;
+    aspect-ratio: 1/1;
+
+
+    border-radius: 50%;
+    position: absolute;
+
+    left: 50%;
+    animation: line-animation 6s linear infinite;
+
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    transform-origin: 50% 75px;
+    /* transition: transform 60s linear;*/
+    /*  transform: translate(-50%, 50%) rotate(1turn);*/
+
+    /* ===================================*/
+}
+
+.box {
+    background-color: rgb(95, 158, 160);
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    bottom: -20px;
+    left: 7px;
+    color: white;
+    position: relative;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 10px black;
+
+}
+
+
+
+@keyframes line-animation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(1turn);
+
+    }
+}
+
+
+/*.box:hover .line {
+    transition: transform 60s linear;
+}*/
